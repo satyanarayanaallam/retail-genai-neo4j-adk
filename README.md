@@ -2,35 +2,38 @@
 
 ## 📌 Project Overview
 This project demonstrates how **Generative AI + Graph Databases + Agentic AI** can power **intelligent retail insights and product recommendations**.  
-We integrate **Neo4j** for retail knowledge graphs, **Google Agentic Development Kit (ADK)** for multi-agent orchestration, and **Gemini Flash** for natural language generation.
+We integrate **Neo4j** for the retail knowledge graph, **Google Agentic Development Kit (ADK)** for multi-agent orchestration, and **Gemini Flash** for natural language generation.
 
-### 🔹 Key Features
-- Build a **Retail Knowledge Graph** in Neo4j (Customers, Products, Categories, Transactions, Promotions).
-- Enable **natural language querying** with agents that convert user queries → Cypher → graph insights.
-- Power **personalized recommendations** (cross-sell, seasonal promotions, customer 360 views).
-- Use **RAG (Retrieval-Augmented Generation)** with Gemini Flash to generate **marketing descriptions** enriched by graph context.
-- Validate outputs with **Eval framework** for recommendation accuracy and reliability.
+---
+
+## 🔹 Key Features
+- Build a **Retail Knowledge Graph** in Neo4j (Customers, Products, Categories, Transactions, Promotions).  
+- Enable **natural language querying** with agents that convert user queries → Cypher → graph insights.  
+- Power **personalized recommendations** (cross-sell, seasonal promotions, customer 360 views).  
+- Use **RAG (Retrieval-Augmented Generation)** with Gemini Flash to generate **marketing descriptions** enriched by graph context.  
+- Validate outputs with **Eval framework** for recommendation accuracy and reliability.  
 
 ---
 
 ## 📂 Project Structure
 ```bash
 retail-genai-neo4j-adk/
-├── backend/                  # Spring Boot / FastAPI backend
-│   ├── src/                  # Source code
-│   ├── tests/                # Unit/integration tests
-│   └── pom.xml / pyproject.toml
+├── backend/                  # FastAPI backend service
+│   ├── main.py                # API entrypoint
+│   ├── routers/               # API routes
+│   ├── services/              # Business logic (RAG, recommendations)
+│   └── tests/                 # Unit/integration tests
 ├── agents/                   # Google ADK agent definitions
 │   ├── query_agent.py
 │   ├── recommendation_agent.py
 │   └── summarization_agent.py
 ├── data/                     # Sample datasets (Kaggle retail, transactions, etc.)
 │   └── retail_transactions.csv
-├── notebooks/                # ML/Graph exploration notebooks
+├── notebooks/                # Jupyter notebooks for exploration
 │   ├── graph_embedding.ipynb
 │   └── recommendation_eval.ipynb
 ├── docker/                   # Dockerfiles, K8s manifests
-│   ├── Dockerfile.backend
+│   ├── Dockerfile
 │   └── k8s-deployment.yaml
-├── README.md                 # Project documentation
-└── requirements.txt / pom.xml
+├── requirements.txt          # Python dependencies
+└── README.md
