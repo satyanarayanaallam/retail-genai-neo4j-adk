@@ -1,0 +1,27 @@
+# Core web framework
+fastapi
+uvicorn
+
+# Neo4j database driver
+neo4j
+
+# Google Agentic Development Kit (ADK)
+google-cloud-aiplatform  # Placeholder, replace with actual ADK package if available
+
+# Gemini Flash (Google generative AI)
+google-generativeai  # Placeholder, replace with actual Gemini Flash package if available
+
+# Data science and evaluation
+pandas
+scikit-learn
+
+# Jupyter notebooks
+notebook
+jupyter
+
+# Testing
+pytest
+httpx
+
+# Optional: for CORS, security, etc.
+python-dotenv
